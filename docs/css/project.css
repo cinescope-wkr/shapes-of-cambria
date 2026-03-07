@@ -139,6 +139,12 @@ a:active {
   margin-top: 0.35rem;
 }
 
+.bio-social {
+  display: inline-block;
+  margin-top: 0.35rem;
+  margin-left: 0.4rem;
+}
+
 @media (max-width: 576px) {
   .author-bio-text {
     text-align: left;
