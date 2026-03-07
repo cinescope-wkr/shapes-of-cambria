@@ -46,6 +46,19 @@ a:active {
   }
 }
 
+/* Make the main badge buttons align icon/text nicely */
+.big-badge-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.big-badge-button .fa {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
 .project-text-left {
   text-align: left;
 }
