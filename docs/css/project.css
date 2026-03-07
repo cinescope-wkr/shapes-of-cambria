@@ -57,6 +57,30 @@ a:active {
   margin-bottom: 0.75rem;
 }
 
+/* Clickable author bio toggle (name expands/collapses a short bio) */
+.author-bio {
+  display: inline-block;
+  text-align: center;
+}
+.author-bio summary {
+  list-style: none;
+}
+.author-bio summary::-webkit-details-marker {
+  display: none;
+}
+.author-bio summary.plain-link {
+  cursor: pointer;
+}
+.author-bio summary.plain-link:focus {
+  outline: none;
+}
+.author-bio-text {
+  margin-top: 0.35rem;
+  max-width: 620px;
+  font-size: 0.95rem;
+  color: var(--project-muted);
+}
+
 /* Header GitHub icon: keep it aligned and not huge (Font Awesome base styles are large). */
 .project-nav-row .link-button .fa,
 .project-nav-row .link-button-small .fa {
