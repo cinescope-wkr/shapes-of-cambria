@@ -114,6 +114,11 @@ a:active {
   border-bottom-color: rgba(0, 0, 0, 0.65);
 }
 
+.bio-contact {
+  display: inline-block;
+  margin-top: 0.35rem;
+}
+
 /* Header GitHub icon: keep it aligned and not huge (Font Awesome base styles are large). */
 .project-nav-row .link-button .fa,
 .project-nav-row .link-button-small .fa {
