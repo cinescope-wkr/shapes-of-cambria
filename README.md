@@ -14,6 +14,7 @@ This repository is set up as a simple static website for GitHub Pages.
   - Paper PDF: `assets/paper.pdf`
   - Teaser: `assets/img/teaser.*`
   - Figures/photos: `assets/img/fig-01.*`, `assets/img/fig-02.*`
+- Favicon: `favicon.svg` (vector) and `favicon.png` (fallback)
 
 ## Publish on GitHub Pages
 
