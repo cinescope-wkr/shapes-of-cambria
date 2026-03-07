@@ -5,10 +5,10 @@ Official submission page for **CVPR Art Gallery 2026**, plus the accompanying mo
 ## Repository layout
 
 - Website (GitHub Pages)
-  - `site/index.html` (single-page project site)
-  - `site/css/` (styling)
-  - `site/assets/` (paper + images)
-  - `site/favicon.svg`, `site/favicon.png`
+  - `docs/index.html` (single-page project site)
+  - `docs/css/` (styling)
+  - `docs/assets/` (paper + images)
+  - `docs/favicon.svg`, `docs/favicon.png`
 - Code (model + reproduction)
   - `model/` (put training/inference code here)
   - `scripts/` (helper scripts)
@@ -17,14 +17,14 @@ Official submission page for **CVPR Art Gallery 2026**, plus the accompanying mo
 ## Website: edit + preview
 
 - Replace assets:
-  - Paper PDF: `site/assets/paper.pdf`
-  - Teaser: `site/assets/img/teaser.*`
-  - Figures/photos: `site/assets/img/fig-01.*`, `site/assets/img/fig-02.*`
-- Update links/IDs in `site/index.html` (GitHub URL and YouTube video ID).
+  - Paper PDF: `docs/assets/paper.pdf`
+  - Teaser: `docs/assets/img/teaser.*`
+  - Figures/photos: `docs/assets/img/fig-01.*`, `docs/assets/img/fig-02.*`
+- Update links/IDs in `docs/index.html` (GitHub URL and YouTube video ID).
 
 Local preview:
 
-- `cd site && python3 -m http.server 8000`
+- `cd docs && python3 -m http.server 8000`
 - Open `http://localhost:8000/`
 
 ## Publish on GitHub Pages
@@ -34,7 +34,7 @@ In GitHub (repo: `cinescope-wkr/shapes-of-cambria`):
 - `Settings → Pages`
 - Source: “Deploy from a branch”
 - Branch: `main`
-- Folder: `/site`
+- Folder: `/docs`
 
 ## Code: notes
 
