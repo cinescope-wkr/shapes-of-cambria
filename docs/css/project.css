@@ -51,7 +51,8 @@ a:active {
   font-size: 1rem;
   text-align: center;
   color: var(--project-muted);
-  margin-top: 0.15rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .project-text-left {
