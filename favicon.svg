@@ -99,20 +99,20 @@
   </g>
 
   <!-- Geometric construction lines -->
-  <g fill="none" stroke="#111111" stroke-opacity="0.18" stroke-width="4">
+  <g fill="none" stroke="#111111" stroke-opacity="0.22" stroke-width="4">
     <circle cx="256" cy="256" r="152"/>
-    <circle cx="256" cy="256" r="104" stroke-opacity="0.14"/>
+    <circle cx="256" cy="256" r="104" stroke-opacity="0.18"/>
     <path d="M256 104 L256 408"/>
     <path d="M104 256 L408 256"/>
-    <path d="M148 148 L364 364" stroke-opacity="0.14"/>
-    <path d="M364 148 L148 364" stroke-opacity="0.14"/>
+    <path d="M148 148 L364 364" stroke-opacity="0.18"/>
+    <path d="M364 148 L148 364" stroke-opacity="0.18"/>
   </g>
 
   <!-- Cambrian “specimen” (simple trilobite-like geometry) -->
   <g>
     <ellipse cx="256" cy="258" rx="98" ry="118" fill="#ffffff" fill-opacity="0.58" stroke="#0f0f0f" stroke-opacity="0.34" stroke-width="5"/>
     <ellipse cx="256" cy="214" rx="60" ry="56" fill="none" stroke="#0f0f0f" stroke-opacity="0.26" stroke-width="4"/>
-    <path d="M152 258 C 204 238, 308 238, 360 258" fill="none" stroke="#0f0f0f" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
+    <path d="M152 256 C 204 236, 308 236, 360 256" fill="none" stroke="#0f0f0f" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
     <path d="M210 302 C 234 284, 278 284, 302 302" fill="none" stroke="#0f0f0f" stroke-opacity="0.24" stroke-width="4" stroke-linecap="round"/>
     <path d="M206 342 C 234 324, 278 324, 306 342" fill="none" stroke="#0f0f0f" stroke-opacity="0.20" stroke-width="4" stroke-linecap="round"/>
     <path d="M256 146 L256 378" fill="none" stroke="#0f0f0f" stroke-opacity="0.18" stroke-width="4" stroke-linecap="round"/>
