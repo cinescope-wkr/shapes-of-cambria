@@ -36,6 +36,18 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <filter id="raySoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.85 0" result="s"/>
+      <feMerge>
+        <feMergeNode in="s"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
     <filter id="haze" x="-60%" y="-60%" width="220%" height="220%">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
       <feColorMatrix in="n" type="matrix"
@@ -87,11 +99,11 @@
   <circle cx="370" cy="370" r="240" fill="url(#coolFill)"/>
   <g filter="url(#glow)">
     <circle cx="178" cy="148" r="260" fill="url(#lightSpot)"/>
-    <g fill="url(#ray)">
-      <path d="M78 82 L238 134 L72 278 Z"/>
-      <path d="M92 70 L286 128 L86 324 Z" opacity="0.82"/>
-      <path d="M110 64 L334 140 L112 374 Z" opacity="0.64"/>
-      <path d="M128 60 L372 166 L146 416 Z" opacity="0.48"/>
+    <g fill="url(#ray)" filter="url(#raySoft)">
+      <!-- Curved beams (less obvious overlap than triangles) -->
+      <path d="M70 66 Q 190 106 332 132 L146 424 Q 102 304 70 190 Z" opacity="0.62"/>
+      <path d="M94 62 Q 210 102 344 128 L168 426 Q 130 320 94 206 Z" opacity="0.55"/>
+      <path d="M118 62 Q 232 104 360 140 L198 424 Q 166 338 118 228 Z" opacity="0.44"/>
     </g>
   </g>
   <g mask="url(#coneMask)" filter="url(#haze)" opacity="0.60">
