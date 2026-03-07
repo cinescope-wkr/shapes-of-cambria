@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#fafafa"/>
+  <g opacity="0.9">
+    <rect x="120" y="160" width="200" height="200" fill="none" stroke="#E03838" stroke-width="10"/>
+    <rect x="360" y="240" width="240" height="240" fill="none" stroke="#111111" stroke-width="6" opacity="0.35"/>
+    <rect x="650" y="190" width="260" height="260" fill="none" stroke="#111111" stroke-width="6" opacity="0.25"/>
+  </g>
+  <text x="600" y="760" text-anchor="middle" font-family="Alegreya, serif" font-size="44" fill="#111111">Figure 2</text>
+  <text x="600" y="815" text-anchor="middle" font-family="Lora, serif" font-size="24" fill="#606060">Replace assets/img/fig-02.*</text>
+</svg>
+

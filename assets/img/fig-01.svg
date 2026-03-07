@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#fafafa"/>
+  <path d="M60 100 C 260 40, 460 160, 600 110 S 920 140, 1140 90" fill="none" stroke="#E03838" stroke-width="10" stroke-linecap="round"/>
+  <path d="M60 300 C 260 240, 460 360, 600 310 S 920 340, 1140 290" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <path d="M60 500 C 260 440, 460 560, 600 510 S 920 540, 1140 490" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" opacity="0.25"/>
+  <text x="600" y="760" text-anchor="middle" font-family="Alegreya, serif" font-size="44" fill="#111111">Figure 1</text>
+  <text x="600" y="815" text-anchor="middle" font-family="Lora, serif" font-size="24" fill="#606060">Replace assets/img/fig-01.*</text>
+</svg>
+
