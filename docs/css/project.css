@@ -100,7 +100,10 @@ a:active {
   max-width: 620px;
   font-size: 0.95rem;
   color: var(--project-muted);
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+  hyphens: auto;
   line-height: 1.45;
 }
 
@@ -118,6 +121,13 @@ a:active {
 .bio-contact {
   display: inline-block;
   margin-top: 0.35rem;
+}
+
+@media (max-width: 576px) {
+  .author-bio-text {
+    text-align: left;
+    hyphens: manual;
+  }
 }
 
 /* Header GitHub icon: keep it aligned and not huge (Font Awesome base styles are large). */
