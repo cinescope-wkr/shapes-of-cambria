@@ -55,6 +55,15 @@ a:active {
   margin-bottom: 0.75rem;
 }
 
+/* Header GitHub icon: keep it aligned and not huge (Font Awesome base styles are large). */
+.project-nav-row .fa {
+  font-size: 22px;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1;
+  vertical-align: middle;
+}
+
 .project-text-left {
   text-align: left;
 }
