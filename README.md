@@ -36,6 +36,8 @@ In GitHub (repo: `cinescope-wkr/shapes-of-cambria`):
 - Branch: `main`
 - Folder: `/docs`
 
+Note: there is also a tiny root `index.html` which redirects to `./docs/` as a safety net if Pages is ever pointed at the repo root by mistake.
+
 ## Code: notes
 
 - Large binaries (checkpoints, datasets, renders) should go in Releases or external storage; don’t commit them to git.
