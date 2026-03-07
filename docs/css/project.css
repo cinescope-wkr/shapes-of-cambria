@@ -167,6 +167,30 @@ a:active {
   text-align: left;
 }
 
+.paper-blurb {
+  margin-bottom: 0.75rem;
+}
+
+.paper-hint {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--project-muted);
+  font-size: 0.95rem;
+}
+
+.paper-abstract-toggle summary {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.paper-abstract {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--project-ink);
+}
+
 .project-details summary {
   cursor: pointer;
   font-weight: 600;
@@ -300,6 +324,11 @@ a:active {
 
   .project-pdf {
     border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  .paper-abstract {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.06);
   }
 
   .statement-link {
