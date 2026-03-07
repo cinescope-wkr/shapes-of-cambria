@@ -49,10 +49,33 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <filter id="burstGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b1"/>
+      <feGaussianBlur stdDeviation="14" result="b2"/>
+      <feColorMatrix in="b2" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.35 0" result="g2"/>
+      <feMerge>
+        <feMergeNode in="g2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
     <mask id="coneMask">
       <rect width="512" height="512" fill="#000"/>
       <path d="M56 56 L318 120 L120 418 Z" fill="#fff"/>
       <path d="M64 56 L360 136 L132 448 Z" fill="#fff" opacity="0.55"/>
+    </mask>
+    <radialGradient id="burstAlpha" cx="256" cy="256" r="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.80" stop-color="#ffffff" stop-opacity="0.70"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.30"/>
+    </radialGradient>
+    <mask id="burstMask">
+      <rect width="512" height="512" fill="url(#burstAlpha)"/>
     </mask>
   </defs>
 
@@ -96,16 +119,42 @@
   </g>
 
   <!-- Diversification “burst” ring (explosion motif, kept minimal) -->
-  <g fill="none" stroke="#FFD86E" stroke-width="9" stroke-linecap="round" opacity="0.60">
-    <path d="M256 118 L256 144"/>
-    <path d="M336 136 L320 156"/>
-    <path d="M388 206 L362 218"/>
-    <path d="M394 296 L368 288"/>
-    <path d="M346 370 L328 350"/>
-    <path d="M256 394 L256 368"/>
-    <path d="M166 370 L184 350"/>
-    <path d="M118 296 L144 288"/>
-    <path d="M124 206 L150 218"/>
-    <path d="M176 136 L192 156"/>
+  <g mask="url(#burstMask)">
+    <g fill="none" stroke="#FFD86E" stroke-width="18" stroke-linecap="round" opacity="0.16" filter="url(#burstGlow)">
+      <path d="M256 118 L256 144"/>
+      <path d="M336 136 L320 156"/>
+      <path d="M388 206 L362 218"/>
+      <path d="M394 296 L368 288"/>
+      <path d="M346 370 L328 350"/>
+      <path d="M256 394 L256 368"/>
+      <path d="M166 370 L184 350"/>
+      <path d="M118 296 L144 288"/>
+      <path d="M124 206 L150 218"/>
+      <path d="M176 136 L192 156"/>
+    </g>
+    <g fill="none" stroke="#FFD86E" stroke-width="11" stroke-linecap="round" opacity="0.82">
+      <path d="M256 118 L256 144"/>
+      <path d="M336 136 L320 156"/>
+      <path d="M388 206 L362 218"/>
+      <path d="M394 296 L368 288"/>
+      <path d="M346 370 L328 350"/>
+      <path d="M256 394 L256 368"/>
+      <path d="M166 370 L184 350"/>
+      <path d="M118 296 L144 288"/>
+      <path d="M124 206 L150 218"/>
+      <path d="M176 136 L192 156"/>
+    </g>
+    <g fill="none" stroke="#FFF3CF" stroke-width="5" stroke-linecap="round" opacity="0.55">
+      <path d="M256 118 L256 144"/>
+      <path d="M336 136 L320 156"/>
+      <path d="M388 206 L362 218"/>
+      <path d="M394 296 L368 288"/>
+      <path d="M346 370 L328 350"/>
+      <path d="M256 394 L256 368"/>
+      <path d="M166 370 L184 350"/>
+      <path d="M118 296 L144 288"/>
+      <path d="M124 206 L150 218"/>
+      <path d="M176 136 L192 156"/>
+    </g>
   </g>
 </svg>
