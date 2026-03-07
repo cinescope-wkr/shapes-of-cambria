@@ -68,26 +68,31 @@ a:active {
 .author-bio summary::-webkit-details-marker {
   display: none;
 }
-.author-bio summary.plain-link {
+.author-bio summary.author-name {
   cursor: pointer;
   display: inline-flex;
   align-items: baseline;
-  gap: 0.35rem;
+  gap: 0.4rem;
+  font-family: "Alegreya", serif;
+  font-size: 1.2em;
+  color: #000;
+  text-decoration: none;
 }
-.author-bio summary.plain-link:focus {
+.author-bio summary.author-name:focus {
   outline: none;
 }
-.author-bio summary.plain-link::after {
-  content: "▾";
-  font-size: 0.85em;
+.author-toggle-hint::after {
+  content: "bio ▾";
+  font-size: 0.75em;
+  letter-spacing: 0.02em;
   opacity: 0.65;
-  transform: translateY(-0.02em);
+  color: var(--project-muted);
 }
-.author-bio[open] summary.plain-link::after {
-  content: "▴";
+.author-bio[open] .author-toggle-hint::after {
+  content: "close ▴";
   opacity: 0.75;
 }
-.author-bio summary.plain-link:hover::after {
+.author-bio summary.author-name:hover .author-toggle-hint::after {
   opacity: 0.95;
 }
 .author-bio-text {
@@ -95,6 +100,18 @@ a:active {
   max-width: 620px;
   font-size: 0.95rem;
   color: var(--project-muted);
+  text-align: left;
+  line-height: 1.45;
+}
+
+/* Inline links inside bio: same typography, subtle dotted underline to hint clickability */
+.bio-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.35);
+}
+.bio-link:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.65);
 }
 
 /* Header GitHub icon: keep it aligned and not huge (Font Awesome base styles are large). */
