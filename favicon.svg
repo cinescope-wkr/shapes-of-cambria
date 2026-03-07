@@ -76,27 +76,27 @@
   </g>
 
   <!-- Geometric construction lines -->
-  <g fill="none" stroke="#111111" stroke-opacity="0.14" stroke-width="3">
+  <g fill="none" stroke="#111111" stroke-opacity="0.18" stroke-width="4">
     <circle cx="256" cy="256" r="152"/>
-    <circle cx="256" cy="256" r="104" stroke-opacity="0.12"/>
+    <circle cx="256" cy="256" r="104" stroke-opacity="0.14"/>
     <path d="M256 104 L256 408"/>
     <path d="M104 256 L408 256"/>
-    <path d="M148 148 L364 364" stroke-opacity="0.12"/>
-    <path d="M364 148 L148 364" stroke-opacity="0.12"/>
+    <path d="M148 148 L364 364" stroke-opacity="0.14"/>
+    <path d="M364 148 L148 364" stroke-opacity="0.14"/>
   </g>
 
   <!-- Cambrian “specimen” (simple trilobite-like geometry) -->
   <g>
-    <ellipse cx="256" cy="268" rx="98" ry="118" fill="#ffffff" fill-opacity="0.62" stroke="#111111" stroke-opacity="0.22" stroke-width="3"/>
-    <ellipse cx="256" cy="224" rx="60" ry="56" fill="none" stroke="#111111" stroke-opacity="0.18" stroke-width="3"/>
-    <path d="M188 268 C 216 250, 296 250, 324 268" fill="none" stroke="#111111" stroke-opacity="0.20" stroke-width="3" stroke-linecap="round"/>
-    <path d="M180 312 C 214 292, 298 292, 332 312" fill="none" stroke="#111111" stroke-opacity="0.18" stroke-width="3" stroke-linecap="round"/>
-    <path d="M170 352 C 214 332, 298 332, 342 352" fill="none" stroke="#111111" stroke-opacity="0.15" stroke-width="3" stroke-linecap="round"/>
-    <path d="M256 156 L256 388" fill="none" stroke="#111111" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="256" cy="268" rx="98" ry="118" fill="#ffffff" fill-opacity="0.58" stroke="#0f0f0f" stroke-opacity="0.34" stroke-width="5"/>
+    <ellipse cx="256" cy="224" rx="60" ry="56" fill="none" stroke="#0f0f0f" stroke-opacity="0.26" stroke-width="4"/>
+    <path d="M188 268 C 216 250, 296 250, 324 268" fill="none" stroke="#0f0f0f" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
+    <path d="M180 312 C 214 292, 298 292, 332 312" fill="none" stroke="#0f0f0f" stroke-opacity="0.24" stroke-width="4" stroke-linecap="round"/>
+    <path d="M170 352 C 214 332, 298 332, 342 352" fill="none" stroke="#0f0f0f" stroke-opacity="0.20" stroke-width="4" stroke-linecap="round"/>
+    <path d="M256 156 L256 388" fill="none" stroke="#0f0f0f" stroke-opacity="0.18" stroke-width="4" stroke-linecap="round"/>
   </g>
 
   <!-- Diversification “burst” ring (explosion motif, kept minimal) -->
-  <g fill="none" stroke="#FFD86E" stroke-width="8" stroke-linecap="round" opacity="0.62">
+  <g fill="none" stroke="#FFD86E" stroke-width="9" stroke-linecap="round" opacity="0.60">
     <path d="M256 118 L256 144"/>
     <path d="M336 136 L320 156"/>
     <path d="M388 206 L362 218"/>
