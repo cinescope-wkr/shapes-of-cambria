@@ -230,7 +230,7 @@ a:active {
 
 .full-title {
   font-family: 'Alegreya', serif;
-  font-size: 3em;
+  font-size: 2.4em;
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
@@ -296,5 +296,4 @@ a:active {
 .selected-figure-caption {
   max-width: 600px;
 }
-
 

@@ -40,6 +40,12 @@ a:active {
   color: var(--project-muted);
 }
 
+@media (max-width: 576px) {
+  .full-title {
+    font-size: 2.0em;
+  }
+}
+
 .project-text-left {
   text-align: left;
 }
@@ -107,4 +113,3 @@ a:active {
     border-color: rgba(255, 255, 255, 0.18);
   }
 }
-
