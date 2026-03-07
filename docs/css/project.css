@@ -270,6 +270,7 @@ a:active {
   margin-bottom: 0.95rem;
   font-style: italic;
   font-size: 1.02rem;
+  font-weight: 600;
   color: var(--project-ink);
 }
 
