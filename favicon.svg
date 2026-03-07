@@ -114,10 +114,10 @@
   <g fill="none" stroke="#111111" stroke-opacity="0.22" stroke-width="4">
     <circle cx="256" cy="256" r="152"/>
     <circle cx="256" cy="256" r="104" stroke-opacity="0.18"/>
-    <path d="M256 104 L256 408"/>
-    <path d="M104 256 L408 256"/>
-    <path d="M148 148 L364 364" stroke-opacity="0.18"/>
-    <path d="M364 148 L148 364" stroke-opacity="0.18"/>
+    <path d="M256 104 Q 266 256 256 408"/>
+    <path d="M104 256 Q 256 246 408 256"/>
+    <path d="M148 148 Q 264 236 364 364" stroke-opacity="0.18"/>
+    <path d="M364 148 Q 248 236 148 364" stroke-opacity="0.18"/>
   </g>
 
   <!-- Cambrian “specimen” (simple trilobite-like geometry) -->
