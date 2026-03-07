@@ -70,9 +70,25 @@ a:active {
 }
 .author-bio summary.plain-link {
   cursor: pointer;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
 }
 .author-bio summary.plain-link:focus {
   outline: none;
+}
+.author-bio summary.plain-link::after {
+  content: "▾";
+  font-size: 0.85em;
+  opacity: 0.65;
+  transform: translateY(-0.02em);
+}
+.author-bio[open] summary.plain-link::after {
+  content: "▴";
+  opacity: 0.75;
+}
+.author-bio summary.plain-link:hover::after {
+  opacity: 0.95;
 }
 .author-bio-text {
   margin-top: 0.35rem;
