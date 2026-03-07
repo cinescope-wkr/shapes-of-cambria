@@ -56,12 +56,13 @@ a:active {
 }
 
 /* Header GitHub icon: keep it aligned and not huge (Font Awesome base styles are large). */
-.project-nav-row .fa {
-  font-size: 22px;
+.project-nav-row .link-button .fa,
+.project-nav-row .link-button-small .fa {
+  font-size: 1em;
   padding-left: 0;
   padding-right: 0;
   line-height: 1;
-  vertical-align: middle;
+  vertical-align: -0.08em;
 }
 
 .project-text-left {
