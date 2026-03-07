@@ -1,25 +1,41 @@
-<<<<<<< HEAD
 # Shapes of Artificial Cambrian Explosion
-Shapes of Artificial Cambrian Explosion. Official submission to CVPR Art Gallery 2026.
-=======
-# CVPR Art Gallery 2026 — project page
 
-This repository is set up as a simple static website for GitHub Pages.
+Official submission page for **CVPR Art Gallery 2026**, plus the accompanying model/code in the same repository.
 
-## Edit the content
+## Repository layout
 
-- Main page: `index.html`
-- Styles: `css/style.css` (base, from the original template) and `css/project.css` (project-specific overrides)
+- Website (GitHub Pages)
+  - `index.html` (single-page project site)
+  - `css/` (styling)
+  - `assets/` (paper + images)
+  - `favicon.svg`, `favicon.png`
+- Code (model + reproduction)
+  - `model/` (put training/inference code here)
+  - `scripts/` (helper scripts)
+  - `configs/` (YAML/JSON configs)
+
+## Website: edit + preview
+
 - Replace assets:
   - Paper PDF: `assets/paper.pdf`
   - Teaser: `assets/img/teaser.*`
   - Figures/photos: `assets/img/fig-01.*`, `assets/img/fig-02.*`
-- Favicon: `favicon.svg` (vector) and `favicon.png` (fallback)
+- Update links/IDs in `index.html` (GitHub URL and YouTube video ID).
+
+Local preview:
+
+- `python3 -m http.server 8000`
+- Open `http://localhost:8000/`
 
 ## Publish on GitHub Pages
 
-1. Push this repository to GitHub.
-2. In GitHub: **Settings → Pages**
-3. Set **Source** to “Deploy from a branch”, choose `main` and “/(root)”.
+In GitHub (repo: `cinescope-wkr/shapes-of-cambria`):
 
->>>>>>> 78b277c (Minimal project page scaffold)
+- `Settings → Pages`
+- Source: “Deploy from a branch”
+- Branch: `main`
+- Folder: `/(root)`
+
+## Code: notes
+
+- Large binaries (checkpoints, datasets, renders) should go in Releases or external storage; don’t commit them to git.

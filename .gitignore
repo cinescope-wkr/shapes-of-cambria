@@ -1,3 +1,31 @@
 .DS_Store
 Thumbs.db
 ._*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# ML artifacts / datasets
+data/
+datasets/
+outputs/
+runs/
+wandb/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.vscode/

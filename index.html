@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Shapes of Artificial Cambrian Explosion — CVPR Art Gallery 2026 Submission</title>
+    <title>Shapes of Artificial Cambrian Explosion — CVPR Art Gallery 2026</title>
     <meta name="description" content="Project page for a CVPR Art Gallery 2026 submission: paper, images, text, code, and video.">
 
-    <meta property="og:title" content="Project Title — CVPR Art Gallery 2026">
+    <meta property="og:title" content="Shapes of Artificial Cambrian Explosion — CVPR Art Gallery 2026">
     <meta property="og:description" content="Project page: paper, images, text, code, and video.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/img/teaser.svg">
@@ -39,7 +39,7 @@
                 <a href="#paper" class="btn link-button" role="button">Paper</a>
                 <a href="#gallery" class="btn link-button" role="button">Gallery</a>
                 <a href="#video" class="btn link-button" role="button">Video</a>
-                <a href="https://github.com/USER/REPO" class="btn link-button" role="button" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://github.com/cinescope-wkr/shapes-of-cambria" class="btn link-button" role="button" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
             <div class="col d-md-none">
@@ -48,7 +48,7 @@
                 <a href="#paper" class="btn link-button-small" role="button">PDF</a>
                 <a href="#gallery" class="btn link-button-small" role="button">Imgs</a>
                 <a href="#video" class="btn link-button-small" role="button">Video</a>
-                <a href="https://github.com/USER/REPO" class="btn link-button-small" role="button" target="_blank" rel="noopener noreferrer">Code</a>
+                <a href="https://github.com/cinescope-wkr/shapes-of-cambria" class="btn link-button-small" role="button" target="_blank" rel="noopener noreferrer">Code</a>
               </div>
             </div>
           </div>
@@ -57,8 +57,8 @@
             <div class="container project-container" style="text-align:center;">
               <div class="row mb-2">
                 <div class="col">
-                  <p class="full-title">Project Title</p>
-                  <p class="project-subtitle">A one-line artistic/technical tagline goes here.</p>
+                  <p class="full-title">Shapes of Artificial Cambrian Explosion</p>
+                  <p class="project-subtitle">The friction of survival, the ecology of an emergent sight.</p>
                 </div>
               </div>
 
@@ -91,8 +91,8 @@
                 <div class="col">
                   <div class="d-flex justify-content-center flex-wrap">
                     <a href="assets/paper.pdf" class="btn-lg big-badge-button ml-2 mr-2 mb-2" role="button">paper (pdf)</a>
-                    <a href="https://github.com/USER/REPO" class="btn-lg big-badge-button ml-2 mr-2 mb-2" role="button" target="_blank" rel="noopener noreferrer">github</a>
-                    <a href="https://youtu.be/VIDEO_ID" class="btn-lg big-badge-button ml-2 mr-2 mb-2" role="button" target="_blank" rel="noopener noreferrer">youtube</a>
+                    <a href="https://github.com/cinescope-wkr/shapes-of-cambria" class="btn-lg big-badge-button ml-2 mr-2 mb-2" role="button" target="_blank" rel="noopener noreferrer">github</a>
+                    <a id="youtube-link" href="https://youtu.be/VIDEO_ID" class="btn-lg big-badge-button ml-2 mr-2 mb-2" role="button" target="_blank" rel="noopener noreferrer">youtube</a>
                   </div>
                 </div>
               </div>
@@ -138,7 +138,7 @@
               <div class="row mb-4">
                 <div class="col-1"></div>
                 <div class="col">
-                  <div class="embed-responsive embed-responsive-16by9 drop-shadow">
+                  <div id="youtube-embed" class="embed-responsive embed-responsive-16by9 drop-shadow">
                     <iframe
                       title="Project video"
                       src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
@@ -189,5 +189,17 @@
         <div class="col-xl-1"></div>
       </div>
     </div>
+
+    <script>
+      (function () {
+        var videoId = "VIDEO_ID";
+        if (!videoId || videoId === "VIDEO_ID") {
+          var link = document.getElementById("youtube-link");
+          var embed = document.getElementById("youtube-embed");
+          if (link) link.style.display = "none";
+          if (embed) embed.style.display = "none";
+        }
+      })();
+    </script>
   </body>
 </html>
