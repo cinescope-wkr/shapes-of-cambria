@@ -87,12 +87,12 @@
 
   <!-- Cambrian “specimen” (simple trilobite-like geometry) -->
   <g>
-    <ellipse cx="256" cy="268" rx="98" ry="118" fill="#ffffff" fill-opacity="0.58" stroke="#0f0f0f" stroke-opacity="0.34" stroke-width="5"/>
-    <ellipse cx="256" cy="224" rx="60" ry="56" fill="none" stroke="#0f0f0f" stroke-opacity="0.26" stroke-width="4"/>
-    <path d="M188 268 C 216 250, 296 250, 324 268" fill="none" stroke="#0f0f0f" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
-    <path d="M180 312 C 214 292, 298 292, 332 312" fill="none" stroke="#0f0f0f" stroke-opacity="0.24" stroke-width="4" stroke-linecap="round"/>
-    <path d="M170 352 C 214 332, 298 332, 342 352" fill="none" stroke="#0f0f0f" stroke-opacity="0.20" stroke-width="4" stroke-linecap="round"/>
-    <path d="M256 156 L256 388" fill="none" stroke="#0f0f0f" stroke-opacity="0.18" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="256" cy="258" rx="98" ry="118" fill="#ffffff" fill-opacity="0.58" stroke="#0f0f0f" stroke-opacity="0.34" stroke-width="5"/>
+    <ellipse cx="256" cy="214" rx="60" ry="56" fill="none" stroke="#0f0f0f" stroke-opacity="0.26" stroke-width="4"/>
+    <path d="M204 258 C 228 242, 284 242, 308 258" fill="none" stroke="#0f0f0f" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
+    <path d="M198 302 C 228 284, 284 284, 314 302" fill="none" stroke="#0f0f0f" stroke-opacity="0.24" stroke-width="4" stroke-linecap="round"/>
+    <path d="M192 342 C 228 324, 284 324, 320 342" fill="none" stroke="#0f0f0f" stroke-opacity="0.20" stroke-width="4" stroke-linecap="round"/>
+    <path d="M256 146 L256 378" fill="none" stroke="#0f0f0f" stroke-opacity="0.18" stroke-width="4" stroke-linecap="round"/>
   </g>
 
   <!-- Diversification “burst” ring (explosion motif, kept minimal) -->
