@@ -173,26 +173,7 @@ a:active {
 }
 
 .paper-abstract-toggle summary {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
   margin-bottom: 0.65rem;
-  padding: 0.15rem 0.45rem;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.14);
-  background: rgba(0, 0, 0, 0.02);
-  color: var(--project-ink);
-}
-.paper-abstract-toggle summary::after {
-  content: "▾";
-  opacity: 0.65;
-  font-size: 0.9em;
-}
-.paper-abstract-toggle[open] summary::after {
-  content: "▴";
-}
-.paper-abstract-toggle summary:hover {
-  background: rgba(0, 0, 0, 0.04);
 }
 
 .paper-abstract {
@@ -205,8 +186,30 @@ a:active {
 
 .project-details summary {
   cursor: pointer;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
   font-weight: 600;
   color: var(--project-accent);
+  list-style: none;
+}
+
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+.project-details summary::marker {
+  content: "";
+}
+.project-details summary::after {
+  content: "▾";
+  opacity: 0.65;
+  font-size: 0.9em;
+}
+.project-details[open] summary::after {
+  content: "▴";
+}
+.project-details summary:hover {
+  opacity: 0.9;
 }
 
 .project-pdf {
@@ -341,14 +344,6 @@ a:active {
 
   .paper-abstract {
     border-color: rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.06);
-  }
-
-  .paper-abstract-toggle summary {
-    border-color: rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.04);
-  }
-  .paper-abstract-toggle summary:hover {
     background: rgba(255, 255, 255, 0.06);
   }
 
