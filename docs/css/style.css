@@ -222,6 +222,7 @@ a:active {
 
 .big-badge-button {
   font-size: 1.0rem;
+  font-weight: 600;
   background: #E0383833;
 }
 .big-badge-button:hover {
@@ -296,4 +297,3 @@ a:active {
 .selected-figure-caption {
   max-width: 600px;
 }
-
