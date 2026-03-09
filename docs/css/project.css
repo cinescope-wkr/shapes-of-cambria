@@ -238,8 +238,10 @@ a:active {
 }
 
 .big-teaser-image {
+  width: 100%;
   max-height: 520px;
   filter: brightness(0.7);
+  object-fit: fill;
 }
 
 .media-slideshow {
@@ -265,6 +267,13 @@ a:active {
 .media-frame-fade {
   opacity: 0;
   animation: teaser-dissolve 8s ease-in-out infinite;
+}
+
+.cambria-mark {
+  font-family: "Alegreya SC", "Alegreya", serif;
+  font-size: 1.08em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 @keyframes teaser-dissolve {
