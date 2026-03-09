@@ -237,19 +237,50 @@
                       <img src="assets/img/waveoptics-agent.png" class="img-fluid selected-figure drop-shadow" alt="Cambria agent optimizing optical systems">
                     </a>
                     <figcaption class="project-caption">
-                      <span class="figure-label">Fig 1.</span> <a class="cambria-link" href="https://github.com/cinescope-wkr/shapes-of-cambria" target="_blank" rel="noopener noreferrer"><span class="cambria-mark">Cambria</span></a> agents optimize their lens-based optical systems through a differentiable ray tracer to better detect and respond to the surrounding environment, with <span class="caption-accent">human-in-the-loop intervention</span> acting as the environmental pressure that steers their evolution.
+                      <span class="figure-label">Fig 1.</span> <a class="cambria-link" href="https://github.com/cinescope-wkr/shapes-of-cambria" target="_blank" rel="noopener noreferrer"><span class="cambria-mark">Cambria</span></a> agents optimize their lens-based optical systems through <span class="caption-accent">differentiable ray-wave optics</span> to better detect and respond to the surrounding environment, with <span class="caption-accent">human-in-the-loop intervention</span> acting as the environmental pressure that steers their evolution.
                     </figcaption>
                   </figure>
                 </div>
                 <div class="col-md-6">
                   <figure class="project-figure">
-                    <a href="assets/img/fig-02.svg" target="_blank" rel="noopener noreferrer">
-                      <img src="assets/img/fig-02.svg" class="img-fluid selected-figure drop-shadow" alt="Explanatory figure 2">
-                    </a>
+                    <div class="comparison-card">
+                      <div class="comparison-stage drop-shadow" data-compare-stage>
+                        <img src="assets/img/cambira-ocean-human1.png" class="comparison-image comparison-base" data-compare-image alt="Rendered view through optical system 1">
+                        <div class="comparison-overlay" data-compare-overlay>
+                          <img src="assets/img/cambria-ocean.png" class="comparison-image comparison-top" alt="Reference shallow-ocean scene">
+                        </div>
+                        <div class="comparison-divider" data-compare-divider aria-hidden="true"></div>
+                        <input class="comparison-slider" data-compare-slider type="range" min="0" max="100" value="50" aria-label="Compare scene and optical render">
+                        <div class="comparison-label comparison-label-left">Scene</div>
+                        <div class="comparison-label comparison-label-right">Render</div>
+                      </div>
+                      <div class="comparison-toolbar" role="tablist" aria-label="Optical system renders">
+                        <button class="comparison-toggle active" type="button" data-compare-target="assets/img/cambira-ocean-human1.png">Eye 1</button>
+                        <button class="comparison-toggle" type="button" data-compare-target="assets/img/cambria-ocean-human2.png">Eye 2</button>
+                        <button class="comparison-toggle" type="button" data-compare-target="assets/img/cambria-ocean-human3.png">Eye 3</button>
+                        <button class="comparison-toggle" type="button" data-compare-target="assets/img/cambria-ocean-human4.png">Eye 4</button>
+                      </div>
+                    </div>
                     <figcaption class="project-caption">
-                      Caption for figure 2. Connect the image to the core idea.
+                      <span class="figure-label">Fig 2.</span> A shallow-ocean scene from the Cambrian period is set against views rendered through agent-trained lens systems, where human-in-the-loop intervention steers the evolution of perception while <span class="caption-accent">preserving optical artifacts as an artistic means</span> rather than suppressing them as error.
                     </figcaption>
                   </figure>
+                </div>
+              </div>
+
+              <div class="row content-header" id="acknowledgement">
+                <div class="col pr-0">
+                  <p>Acknowledgement</p>
+                </div>
+              </div>
+              <div class="row mb-4 mt-4">
+                <div class="col project-text-left">
+                  <p class="paper-blurb">
+                    This project is in part inspired by <a class="statement-link" href="https://www.media.mit.edu/publications/what-if-eye-computationally-recreating-vision-evolution/" target="_blank" rel="noopener noreferrer">What if eye...? Computationally recreating vision evolution</a> by Kushagra Tiwary et al. (<em>Science Advances</em>, 2025), which computationally studies the coevolution of eyes and behavior in embodied agents.
+                  </p>
+                  <p class="paper-blurb mb-0">
+                    <span class="caption-strong">Future iterations will continue to evolve.</span> The project is intended to unfold as an interactive and video-based installation, expanding toward more explicit evolutionary lineages, <span class="caption-accent">real-time interaction</span>, and <span class="caption-accent">multi-participant environments</span>. In doing so, it aims to reopen the relationship between the artist and evolutionary mechanisms as both an analogy for and a material metaphor of differentiable visual computing and AI, while remaining open to the translational mutations and perceptual artifacts that emerge as the system adapts to new computational settings.
+                  </p>
                 </div>
               </div>
 
@@ -267,5 +298,39 @@
         <div class="col-xl-1"></div>
       </div>
     </div>
+    <script>
+      (function () {
+        var stage = document.querySelector("[data-compare-stage]");
+        if (!stage) return;
+
+        var slider = stage.querySelector("[data-compare-slider]");
+        var overlay = stage.querySelector("[data-compare-overlay]");
+        var divider = stage.querySelector("[data-compare-divider]");
+        var image = stage.querySelector("[data-compare-image]");
+        var buttons = document.querySelectorAll(".comparison-toggle");
+
+        function setSplit(value) {
+          overlay.style.clipPath = "inset(0 " + (100 - value) + "% 0 0)";
+          divider.style.left = value + "%";
+        }
+
+        slider.addEventListener("input", function () {
+          setSplit(slider.value);
+        });
+
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            buttons.forEach(function (item) {
+              item.classList.remove("active");
+            });
+            button.classList.add("active");
+            image.src = button.getAttribute("data-compare-target");
+            image.alt = button.textContent + " rendered view";
+          });
+        });
+
+        setSplit(slider.value);
+      })();
+    </script>
   </body>
 </html>

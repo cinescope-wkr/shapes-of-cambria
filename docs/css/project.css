@@ -306,6 +306,105 @@ a:active {
   margin-top: 1.25rem;
 }
 
+.comparison-card {
+  width: 100%;
+}
+
+.comparison-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.comparison-toggle {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: rgba(255, 252, 244, 0.92);
+  color: var(--project-ink);
+  border-radius: 999px;
+  padding: 0.38rem 0.8rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.comparison-toggle:hover {
+  border-color: rgba(0, 0, 0, 0.32);
+  transform: translateY(-1px);
+}
+
+.comparison-toggle.active {
+  background: var(--project-accent);
+  border-color: var(--project-accent);
+  color: #fffaf2;
+}
+
+.comparison-stage {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0d1216;
+}
+
+.comparison-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comparison-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.comparison-top {
+  width: 100%;
+}
+
+.comparison-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255, 248, 231, 0.95);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  transform: translateX(-1px);
+  pointer-events: none;
+}
+
+.comparison-slider {
+  position: absolute;
+  inset: auto 1rem 0.9rem 1rem;
+  width: calc(100% - 2rem);
+  z-index: 2;
+}
+
+.comparison-label {
+  position: absolute;
+  top: 0.85rem;
+  z-index: 2;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.58);
+  color: #fff8eb;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.comparison-label-left {
+  left: 0.85rem;
+}
+
+.comparison-label-right {
+  right: 0.85rem;
+}
+
 @keyframes media-frame-base-cycle {
   0% {
     opacity: 1;
