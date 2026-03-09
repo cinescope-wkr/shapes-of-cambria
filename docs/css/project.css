@@ -231,7 +231,7 @@ a:active {
 
 .project-caption {
   max-width: 600px;
-  margin: 0.25rem auto 0 auto;
+  margin: 0.9rem auto 0 auto;
   font-size: 0.95rem;
   color: var(--project-muted);
   text-align: center;
@@ -295,6 +295,10 @@ a:active {
 
 .caption-accent {
   color: var(--project-accent);
+  font-weight: 700;
+}
+
+.caption-strong {
   font-weight: 700;
 }
 
