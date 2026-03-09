@@ -17,7 +17,7 @@ Official submission page for **CVPR Art Gallery 2026**, plus the accompanying mo
 ## Website: edit + preview
 
 - Replace assets:
-  - Paper PDF: `docs/assets/paper.pdf`
+  - Paper PDF: `docs/assets/CVPR_2026_Art_Gallery_Submission_JinwooLee.pdf`
   - Teaser: `docs/assets/img/teaser.*`
   - Figures/photos: `docs/assets/img/fig-01.*`, `docs/assets/img/fig-02.*`
 - Update links/IDs in `docs/index.html` (GitHub URL and YouTube video ID).
