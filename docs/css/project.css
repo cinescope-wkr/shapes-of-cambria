@@ -237,6 +237,10 @@ a:active {
   text-align: center;
 }
 
+.figure-label {
+  font-weight: 700;
+}
+
 .big-teaser-image {
   width: 100%;
   max-height: 520px;
@@ -249,15 +253,18 @@ a:active {
   width: 100%;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
+  padding: 0 2.25rem;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
 }
 
 .media-frame {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  inset: 0 2.25rem;
+  width: calc(100% - 4.5rem);
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .media-frame-base {
@@ -274,6 +281,15 @@ a:active {
   font-size: 1.08em;
   font-weight: 700;
   letter-spacing: 0.03em;
+}
+
+.caption-accent {
+  color: var(--project-accent);
+  font-weight: 700;
+}
+
+.video-panel-row {
+  margin-top: 1.25rem;
 }
 
 @keyframes teaser-dissolve {
