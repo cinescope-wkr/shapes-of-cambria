@@ -287,10 +287,23 @@ a:active {
 .cambria-link {
   color: inherit;
   text-decoration: none;
+  border-bottom: 1px solid rgba(224, 56, 56, 0.35);
+  transition: border-bottom-color 120ms ease, color 120ms ease;
 }
 
 .cambria-link:hover {
+  color: var(--project-accent);
   text-decoration: none;
+  border-bottom-color: rgba(224, 56, 56, 0.85);
+}
+
+.cambria-link-neutral {
+  border-bottom-color: rgba(17, 17, 17, 0.28);
+}
+
+.cambria-link-neutral:hover {
+  color: inherit;
+  border-bottom-color: rgba(17, 17, 17, 0.55);
 }
 
 .caption-accent {
