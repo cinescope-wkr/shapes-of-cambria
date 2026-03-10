@@ -1,43 +1,44 @@
-# Shapes of Artificial Cambrian Explosion
+# Shapes of Cambria: The Cambrian Explosion in Silico
 
-Official submission page for **CVPR Art Gallery 2026**, plus the accompanying model/code in the same repository.
+Official repository for *Shapes of Cambria*, a research project on co-optimizing vision, embodiment, and control as a computational and aesthetic medium.
 
-## Repository layout
+The project combines differentiable optics, embodied agents, reinforcement learning, and human-in-the-loop selection to study how optical systems can evolve beyond task optimization toward expressive image formation and perceptual artifacts.
 
-- Website (GitHub Pages)
-  - `docs/index.html` (single-page project site)
-  - `docs/css/` (styling)
-  - `docs/assets/` (paper + images)
-  - `docs/favicon.svg`, `docs/favicon.png`
-- Code (model + reproduction)
-  - `model/` (put training/inference code here)
-  - `scripts/` (helper scripts)
-  - `configs/` (YAML/JSON configs)
+## Status
 
-## Website: edit + preview
+This repository currently contains the official project materials and the scaffold for the accompanying code release. The research codebase is being prepared around an integration of the Cambrian reinforcement-learning framework for MuJoCo-based vision-and-control experiments.
 
-- Replace assets:
-  - Paper PDF: `docs/assets/CVPR_2026_Art_Gallery_Submission_JinwooLee.pdf`
-  - Teaser: `docs/assets/img/teaser.*`
-  - Figures/photos: `docs/assets/img/fig-01.*`, `docs/assets/img/fig-02.*`
-- Update links/IDs in `docs/index.html` (GitHub URL and YouTube video ID).
+## Planned Integration
 
-Local preview:
+The code release is intended to build on **Cambrian: Co-Optimizing Vision and Control in MuJoCo**, a forked research framework derived from [Artificial Cambrian Intelligence (ACI)](https://github.com/cambrian-org/ACI).
 
-- `cd docs && python3 -m http.server 8000`
-- Open `http://localhost:8000/`
+The integrated codebase is expected to provide:
 
-## Publish on GitHub Pages
+- MuJoCo environments for embodied vision-and-control experiments
+- Hydra-based experiment composition and override workflows
+- PPO-based training and evaluation pipelines
+- Optics-aware eye models and morphology parameters
+- Evolutionary or search-based optimization over visual front-end parameters
 
-In GitHub (repo: `cinescope-wkr/shapes-of-cambria`):
+## Repository Structure
 
-- `Settings → Pages`
-- Source: “Deploy from a branch”
-- Branch: `main`
-- Folder: `/docs`
+- `model/`: integrated research codebase and reproducibility materials
+- `configs/`: experiment configuration files
+- `scripts/`: launch and utility scripts
+- `docs/`: paper, figures, and project media assets
 
-Note: there is also a tiny root `index.html` which redirects to `./docs/` as a safety net if Pages is ever pointed at the repo root by mistake.
+## Planned Code Layout
 
-## Code: notes
+- `model/src/`: core library code
+- `model/train.py`: training entry point
+- `model/infer.py`: inference or rendering entry point
+- `configs/`: experiment configuration files
+- `scripts/`: helper utilities for setup, preprocessing, and evaluation
 
-- Large binaries (checkpoints, datasets, renders) should go in Releases or external storage; don’t commit them to git.
+## Attribution
+
+The planned Cambrian integration is based on the ACI project and its downstream fork structure. This repository is maintained by Jinwoo Lee.
+
+## Asset Note
+
+Large checkpoints, datasets, and long renders should be distributed outside git when possible.
