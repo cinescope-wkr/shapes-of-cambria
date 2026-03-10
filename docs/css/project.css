@@ -3,6 +3,7 @@
   --project-ink: #111111;
   --project-muted: #606060;
   --project-bg: #fcfcfc;
+  color-scheme: light;
 }
 
 html {
@@ -590,66 +591,4 @@ a.cambria-link:active {
 .welcome-link:hover {
   border-bottom-color: rgba(0, 0, 0, 0.55);
   opacity: 0.95;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --project-accent: #ff6b6b;
-    --project-ink: #f2f2f2;
-    --project-muted: #b6b6b6;
-    --project-bg: #101010;
-  }
-
-  body {
-    background: linear-gradient(180deg, #0b0b0b 0%, var(--project-bg) 100%);
-  }
-
-  .project-nav-row {
-    background: rgba(15, 15, 15, 0.85);
-  }
-
-  .content-header {
-    border-bottom-color: rgba(255, 255, 255, 0.25);
-  }
-
-  .plain-link {
-    color: var(--project-ink) !important;
-  }
-
-  .project-pdf {
-    border-color: rgba(255, 255, 255, 0.18);
-  }
-
-  .paper-abstract {
-    border-color: rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.06);
-  }
-
-  .statement-link {
-    border-bottom-color: rgba(255, 255, 255, 0.28);
-  }
-  .statement-link:hover {
-    border-bottom-color: rgba(255, 255, 255, 0.55);
-  }
-
-  .statement-question {
-    color: var(--project-ink);
-  }
-
-  .welcome-card {
-    border-color: rgba(255, 255, 255, 0.16);
-    background:
-      radial-gradient(120% 140% at 8% 10%, rgba(255, 214, 120, 0.22) 0%, rgba(255, 214, 120, 0.0) 55%),
-      radial-gradient(140% 120% at 95% 25%, rgba(255, 235, 170, 0.14) 0%, rgba(255, 235, 170, 0.0) 60%),
-      linear-gradient(180deg, rgba(16, 16, 16, 0.7) 0%, rgba(10, 10, 10, 0.5) 100%);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
-  }
-
-  .welcome-link {
-    color: var(--project-ink);
-    border-bottom-color: rgba(255, 255, 255, 0.28);
-  }
-  .welcome-link:hover {
-    border-bottom-color: rgba(255, 255, 255, 0.55);
-  }
 }
