@@ -77,8 +77,8 @@
     </filter>
     <mask id="coneMask">
       <rect width="512" height="512" fill="#000"/>
-      <path d="M56 56 L318 120 L120 418 Z" fill="#fff"/>
-      <path d="M64 56 L360 136 L132 448 Z" fill="#fff" opacity="0.55"/>
+      <path d="M42 104 Q 112 40 236 68 Q 304 84 340 122 Q 284 250 206 414 Q 110 332 58 220 Q 34 164 42 104 Z" fill="#fff"/>
+      <path d="M54 98 Q 132 42 262 74 Q 330 92 378 136 Q 314 278 224 444 Q 126 350 74 230 Q 48 170 54 98 Z" fill="#fff" opacity="0.55"/>
     </mask>
     <radialGradient id="burstAlpha" cx="256" cy="256" r="260" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
@@ -97,7 +97,7 @@
   <g clip-path="url(#tileClip)">
     <!-- Light, gallery-like tile (clipped to rounded square; outside is transparent) -->
     <rect x="0" y="0" width="512" height="512" rx="124" fill="url(#bg)"/>
-    <rect x="0" y="0" width="512" height="512" rx="124" fill="none" stroke="#111111" stroke-opacity="0.10" stroke-width="2"/>
+    <rect x="0" y="0" width="512" height="512" rx="124" fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="2"/>
 
     <!-- Physical-ish light: warm key + cool fill, with directional haze -->
     <circle cx="370" cy="370" r="240" fill="url(#coolFill)"/>
@@ -105,9 +105,9 @@
       <circle cx="178" cy="148" r="260" fill="url(#lightSpot)"/>
       <g fill="url(#ray)" filter="url(#raySoft)">
         <!-- Nested curved beams (reduce visible overlaps) -->
-        <path d="M66 60 Q 198 104 350 134 L164 440 Q 104 304 66 184 Z" opacity="0.62"/>
-        <path d="M92 62 Q 214 102 352 132 L186 438 Q 140 328 92 208 Z" opacity="0.46"/>
-        <path d="M122 66 Q 232 110 356 146 L210 430 Q 176 346 122 232 Z" opacity="0.32"/>
+        <path d="M46 102 Q 132 42 252 76 Q 314 92 346 132 Q 292 252 214 424 Q 112 330 58 220 Q 40 166 46 102 Z" opacity="0.62"/>
+        <path d="M72 98 Q 148 48 264 82 Q 324 98 348 132 Q 302 256 228 420 Q 136 340 84 230 Q 66 182 72 98 Z" opacity="0.46"/>
+        <path d="M104 102 Q 176 60 282 98 Q 332 114 352 146 Q 308 266 242 406 Q 174 344 122 238 Q 106 194 104 102 Z" opacity="0.32"/>
       </g>
     </g>
     <g mask="url(#coneMask)" filter="url(#haze)" opacity="0.60">
@@ -115,62 +115,52 @@
     </g>
 
     <!-- Geometric construction lines -->
-    <g fill="none" stroke="#111111" stroke-opacity="0.22" stroke-width="4">
-      <circle cx="256" cy="256" r="152"/>
-      <circle cx="256" cy="256" r="104" stroke-opacity="0.18"/>
-      <path d="M256 104 L256 408"/>
-      <path d="M104 256 L408 256"/>
-      <path d="M148 148 L364 364" stroke-opacity="0.18"/>
-      <path d="M364 148 L148 364" stroke-opacity="0.18"/>
+    <g fill="none" stroke="#171717" stroke-opacity="0.24" stroke-width="4.5">
+      <circle cx="256" cy="256" r="160"/>
+      <circle cx="256" cy="256" r="92" stroke-opacity="0.20"/>
+      <path d="M256 96 L256 138" stroke-opacity="0.16"/>
+      <path d="M256 138 L256 386" stroke-opacity="0.30"/>
+      <path d="M256 386 L256 416" stroke-opacity="0.16"/>
+      <path d="M96 256 L416 256"/>
+      <path d="M143 143 L369 369" stroke-opacity="0.16"/>
+      <path d="M369 143 L143 369" stroke-opacity="0.16"/>
     </g>
 
     <!-- Cambrian “specimen” (simple trilobite-like geometry) -->
     <g>
-      <ellipse cx="256" cy="258" rx="98" ry="118" fill="#ffffff" fill-opacity="0.58" stroke="#0f0f0f" stroke-opacity="0.34" stroke-width="5"/>
-      <ellipse cx="256" cy="214" rx="60" ry="56" fill="none" stroke="#0f0f0f" stroke-opacity="0.26" stroke-width="4"/>
-      <path d="M216.31 256 C 236 242, 276 242, 295.69 256" fill="none" stroke="#0f0f0f" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
-      <path d="M210 302 C 234 284, 278 284, 302 302" fill="none" stroke="#0f0f0f" stroke-opacity="0.24" stroke-width="4" stroke-linecap="round"/>
-      <path d="M206 342 C 234 324, 278 324, 306 342" fill="none" stroke="#0f0f0f" stroke-opacity="0.20" stroke-width="4" stroke-linecap="round"/>
-      <path d="M256 146 L256 378" fill="none" stroke="#0f0f0f" stroke-opacity="0.18" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="256" cy="258" rx="104" ry="124" fill="#ffffff" fill-opacity="0.58" stroke="#181410" stroke-opacity="0.42" stroke-width="5.5"/>
+      <ellipse cx="256" cy="210" rx="64" ry="60" fill="none" stroke="#181410" stroke-opacity="0.32" stroke-width="4.5"/>
+      <path d="M213 256 Q 256 224 299 256" fill="none" stroke="#181410" stroke-opacity="0.34" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M206 304 Q 256 268 306 304" fill="none" stroke="#181410" stroke-opacity="0.30" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M202 346 Q 256 308 310 346" fill="none" stroke="#181410" stroke-opacity="0.26" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M256 138 L256 378" fill="none" stroke="#181410" stroke-opacity="0.24" stroke-width="4.5" stroke-linecap="round"/>
     </g>
 
     <!-- Diversification “burst” ring (explosion motif, kept minimal) -->
     <g mask="url(#burstMask)">
-      <g fill="none" stroke="#FFD86E" stroke-width="18" stroke-linecap="round" opacity="0.16" filter="url(#burstGlow)">
-        <path d="M256 118 L256 144"/>
-        <path d="M336 136 L320 156"/>
-        <path d="M388 206 L362 218"/>
-        <path d="M394 296 L368 288"/>
-        <path d="M346 370 L328 350"/>
-        <path d="M256 394 L256 368"/>
-        <path d="M166 370 L184 350"/>
-        <path d="M118 296 L144 288"/>
-        <path d="M124 206 L150 218"/>
-        <path d="M176 136 L192 156"/>
+      <g fill="none" stroke="#efbd66" stroke-width="18" stroke-linecap="round" opacity="0.16" filter="url(#burstGlow)">
+        <path d="M225.23 111.23 A148 148 0 0 1 281.7 110.25"/>
+        <path d="M306.62 116.93 A148 148 0 0 1 355.03 146.01"/>
+        <path d="M396.76 301.73 A148 148 0 0 1 369.37 351.13"/>
+        <path d="M351.13 369.37 A148 148 0 0 1 301.73 396.76"/>
+        <path d="M146.01 355.03 A148 148 0 0 1 116.93 306.62"/>
+        <path d="M110.25 281.7 A148 148 0 0 1 111.23 225.23"/>
       </g>
-      <g fill="none" stroke="#FFD86E" stroke-width="11" stroke-linecap="round" opacity="0.90">
-        <path d="M256 118 L256 144"/>
-        <path d="M336 136 L320 156"/>
-        <path d="M388 206 L362 218"/>
-        <path d="M394 296 L368 288"/>
-        <path d="M346 370 L328 350"/>
-        <path d="M256 394 L256 368"/>
-        <path d="M166 370 L184 350"/>
-        <path d="M118 296 L144 288"/>
-        <path d="M124 206 L150 218"/>
-        <path d="M176 136 L192 156"/>
+      <g fill="none" stroke="#edae55" stroke-width="11.5" stroke-linecap="round" opacity="0.88">
+        <path d="M225.23 111.23 A148 148 0 0 1 281.7 110.25"/>
+        <path d="M306.62 116.93 A148 148 0 0 1 355.03 146.01"/>
+        <path d="M396.76 301.73 A148 148 0 0 1 369.37 351.13"/>
+        <path d="M351.13 369.37 A148 148 0 0 1 301.73 396.76"/>
+        <path d="M146.01 355.03 A148 148 0 0 1 116.93 306.62"/>
+        <path d="M110.25 281.7 A148 148 0 0 1 111.23 225.23"/>
       </g>
-      <g fill="none" stroke="#FFF3CF" stroke-width="5" stroke-linecap="round" opacity="0.62">
-        <path d="M256 118 L256 144"/>
-        <path d="M336 136 L320 156"/>
-        <path d="M388 206 L362 218"/>
-        <path d="M394 296 L368 288"/>
-        <path d="M346 370 L328 350"/>
-        <path d="M256 394 L256 368"/>
-        <path d="M166 370 L184 350"/>
-        <path d="M118 296 L144 288"/>
-        <path d="M124 206 L150 218"/>
-        <path d="M176 136 L192 156"/>
+      <g fill="none" stroke="#ffe2a6" stroke-width="5.5" stroke-linecap="round" opacity="0.56">
+        <path d="M225.23 111.23 A148 148 0 0 1 281.7 110.25"/>
+        <path d="M306.62 116.93 A148 148 0 0 1 355.03 146.01"/>
+        <path d="M396.76 301.73 A148 148 0 0 1 369.37 351.13"/>
+        <path d="M351.13 369.37 A148 148 0 0 1 301.73 396.76"/>
+        <path d="M146.01 355.03 A148 148 0 0 1 116.93 306.62"/>
+        <path d="M110.25 281.7 A148 148 0 0 1 111.23 225.23"/>
       </g>
     </g>
   </g>
