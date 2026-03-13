@@ -235,6 +235,18 @@ a:active {
   margin-top: 0.75rem;
 }
 
+.project-citation-inline {
+  margin-top: 1.2rem;
+}
+
+.project-citation-title {
+  margin: 0 0 0.45rem 0;
+  font-family: "Alegreya", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--project-ink);
+}
+
 .project-citation-block {
   margin-top: 0.75rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
