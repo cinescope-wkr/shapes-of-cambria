@@ -52,6 +52,11 @@ a:active {
   .full-title {
     font-size: 2.0em;
   }
+
+  .project-subtitle {
+    font-size: 0.84rem;
+    white-space: nowrap;
+  }
 }
 
 /* Affiliation line: match button-sized typography */
