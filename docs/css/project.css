@@ -231,6 +231,50 @@ a:active {
   border: 0;
 }
 
+.project-citation {
+  margin-top: 0.75rem;
+}
+
+.project-citation-block {
+  margin-top: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.project-citation-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.65rem 0.75rem 0 0.75rem;
+}
+
+.project-copy-button {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 252, 244, 0.92);
+  color: var(--project-ink);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  line-height: 1.2;
+}
+
+.project-copy-button:hover {
+  border-color: rgba(0, 0, 0, 0.32);
+}
+
+.project-citation-pre {
+  margin: 0;
+  padding: 0.4rem 0.85rem 0.9rem 0.85rem;
+  color: var(--project-ink);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: transparent;
+}
+
 .project-figure {
   margin: 0 0 1.25rem 0;
 }

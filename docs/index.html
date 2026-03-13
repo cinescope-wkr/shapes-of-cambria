@@ -200,6 +200,21 @@
                       <iframe title="Art paper PDF preview" src="assets/CVPR_2026_Art_Gallery_Submission_JinwooLee.pdf#view=FitH" loading="lazy"></iframe>
                     </div>
                   </details>
+                  <details class="project-details project-citation">
+                    <summary>BibTeX</summary>
+                    <div class="project-citation-block">
+                      <div class="project-citation-actions">
+                        <button class="project-copy-button" type="button" data-copy-target="cambria-bibtex">Copy</button>
+                      </div>
+                      <pre class="project-citation-pre"><code id="cambria-bibtex">@misc{lee2026shapescambria,
+  title        = {Shapes of Cambria: The Cambrian Explosion in Silico},
+  author       = {Lee, Jinwoo},
+  year         = {2026},
+  howpublished = {CVPR Art Gallery 2026 submission},
+  note         = {Project page: https://cinescope-wkr.github.io/shapes-of-cambria/}
+}</code></pre>
+                    </div>
+                  </details>
                 </div>
               </div>
 
@@ -323,6 +338,41 @@
             button.classList.add("active");
             image.src = button.getAttribute("data-compare-target");
             image.alt = button.textContent + " rendered view";
+          });
+        });
+
+        var copyButtons = document.querySelectorAll("[data-copy-target]");
+        copyButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var target = document.getElementById(button.getAttribute("data-copy-target"));
+            if (!target) return;
+
+            var text = target.textContent;
+            var resetLabel = function () {
+              button.textContent = "Copy";
+            };
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(text).then(function () {
+                button.textContent = "Copied";
+                window.setTimeout(resetLabel, 1200);
+              });
+              return;
+            }
+
+            var range = document.createRange();
+            range.selectNodeContents(target);
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            try {
+              document.execCommand("copy");
+              button.textContent = "Copied";
+              window.setTimeout(resetLabel, 1200);
+            } finally {
+              selection.removeAllRanges();
+            }
           });
         });
 
