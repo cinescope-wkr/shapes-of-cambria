@@ -128,7 +128,7 @@ a:active {
   margin-top: 0.35rem;
   max-width: 620px;
   font-size: 0.95rem;
-  color: var(--project-muted);
+  color: #2a2a2a;
   text-align: justify;
   text-justify: inter-word;
   text-align-last: left;
@@ -295,7 +295,7 @@ a:active {
   max-width: 600px;
   margin: 0.9rem auto 0 auto;
   font-size: 0.95rem;
-  color: var(--project-muted);
+  color: #2d2d2d;
   text-align: left;
 }
 
@@ -344,6 +344,10 @@ a:active {
   font-size: 1.08em;
   font-weight: 700;
   letter-spacing: 0.03em;
+}
+
+.project-caption .cambria-mark {
+  color: var(--project-ink);
 }
 
 a.cambria-link,
