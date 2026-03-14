@@ -196,6 +196,11 @@ a:active {
   margin-bottom: 0.65rem;
 }
 
+.paper-abstract-toggle[open] {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .paper-abstract {
   padding: 0.75rem 0.85rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
