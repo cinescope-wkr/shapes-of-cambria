@@ -158,12 +158,16 @@ a:active {
 
 .bio-contact {
   display: block;
-  margin-top: 0.12rem;
+  margin-top: 0.04rem;
   font-family: "Alegreya", serif;
   font-size: 1.02rem;
   font-weight: 500;
   line-height: 1.35;
   color: var(--project-muted);
+}
+
+.bio-contact + .bio-contact {
+  margin-top: 0.08rem;
 }
 
 .bio-contact-last {
