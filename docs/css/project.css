@@ -414,6 +414,14 @@ a.cambria-link:active {
   margin-top: 1.25rem;
 }
 
+.project-video-figure {
+  margin-bottom: 0;
+}
+
+.project-video-caption {
+  max-width: 760px;
+}
+
 .comparison-card {
   width: 100%;
 }
