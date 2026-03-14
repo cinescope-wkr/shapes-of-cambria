@@ -612,6 +612,22 @@ a.cambria-link:active {
     font-size: 0.79rem;
   }
 
+  .project-citation-pre {
+    display: block;
+    padding: 0.08rem 0.85rem 0.95rem 0.85rem;
+    font-size: 0.84rem;
+    line-height: 1.56;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+  .project-citation-pre code {
+    display: block;
+    max-width: 100%;
+  }
+
 }
 
 @keyframes media-frame-base-cycle {
