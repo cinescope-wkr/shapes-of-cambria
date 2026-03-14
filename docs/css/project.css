@@ -3,6 +3,8 @@
   --project-ink: #111111;
   --project-muted: #606060;
   --project-bg: #fcfcfc;
+  --project-soft-rect-radius: 8px;
+  --project-panel-bg: linear-gradient(180deg, rgba(249, 247, 242, 0.98) 0%, rgba(243, 239, 232, 0.96) 100%);
   color-scheme: light;
 }
 
@@ -38,6 +40,7 @@ a:active {
   margin: 0.25rem 0 0 0;
   font-family: "Alegreya", serif;
   font-size: 1.15rem;
+  font-weight: 500;
   color: var(--project-muted);
 }
 
@@ -63,7 +66,7 @@ a:active {
 .project-affiliation {
   font-family: "Alegreya", serif;
   font-size: 1.08rem;
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
   color: var(--project-muted);
   margin-top: 0.25rem;
@@ -128,12 +131,12 @@ a:active {
   margin-top: 0.35rem;
   max-width: 620px;
   font-size: 0.95rem;
-  color: #2a2a2a;
+  color: #171717;
   text-align: justify;
   text-justify: inter-word;
   text-align-last: left;
   hyphens: auto;
-  line-height: 1.45;
+  line-height: 1.54;
 }
 
 /* Inline links inside bio: same typography, subtle dotted underline to hint clickability */
@@ -185,7 +188,7 @@ a:active {
 .paper-abstract {
   padding: 0.75rem 0.85rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
+  border-radius: var(--project-soft-rect-radius);
   background: rgba(0, 0, 0, 0.03);
   color: var(--project-ink);
 }
@@ -221,7 +224,7 @@ a:active {
 .project-pdf {
   margin-top: 0.75rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 6px;
+  border-radius: var(--project-soft-rect-radius);
   overflow: hidden;
 }
 
@@ -232,59 +235,92 @@ a:active {
 }
 
 .project-citation {
-  margin-top: 0.75rem;
-}
-
-.project-citation-inline {
-  margin-top: 1.2rem;
+  margin-top: 0;
 }
 
 .project-citation-title {
-  margin: 0 0 0.45rem 0;
+  margin: 0 0 0.75rem 0;
   font-family: "Alegreya", serif;
-  font-size: 1rem;
+  font-size: 1.22rem;
   font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
   color: var(--project-ink);
 }
 
 .project-citation-block {
-  margin-top: 0.75rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.03);
+  border-radius: var(--project-soft-rect-radius);
+  background: linear-gradient(180deg, rgba(242, 242, 240, 0.98) 0%, rgba(236, 236, 233, 0.98) 100%);
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.04);
   overflow: hidden;
 }
 
 .project-citation-actions {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  padding: 0.65rem 0.75rem 0 0.75rem;
+  padding: 0.68rem 0.95rem 0.08rem 0.95rem;
 }
 
 .project-copy-button {
-  border: 1px solid rgba(0, 0, 0, 0.16);
-  border-radius: 999px;
-  background: rgba(255, 252, 244, 0.92);
-  color: var(--project-ink);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.3rem 0.7rem;
-  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: var(--project-soft-rect-radius);
+  background: rgba(255, 255, 255, 0.58);
+  color: rgba(17, 17, 17, 0.96);
+  font-size: 0.84rem;
+  font-weight: 550;
+  padding: 0.42rem 0.88rem;
+  line-height: 1;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
 }
 
 .project-copy-button:hover {
-  border-color: rgba(0, 0, 0, 0.32);
+  border-color: rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.74);
+  color: rgba(17, 17, 17, 0.96);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.project-copy-button.is-copied {
+  background: rgba(229, 229, 227, 0.9);
+  border-color: rgba(0, 0, 0, 0.12);
+  color: rgba(17, 17, 17, 0.96);
 }
 
 .project-citation-pre {
   margin: 0;
-  padding: 0.4rem 0.85rem 0.9rem 0.85rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.08rem 1.15rem 1rem 1.15rem;
   color: var(--project-ink);
-  font-size: 0.9rem;
-  line-height: 1.45;
-  white-space: pre-wrap;
-  word-break: break-word;
+  font-size: 0.91rem;
+  line-height: 1.62;
+  white-space: pre;
+  word-break: normal;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   background: transparent;
+  text-align: left;
+}
+
+.project-citation-pre code {
+  display: inline-block;
+  font-family: "SFMono-Regular", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-kerning: none;
+  font-variant-ligatures: none;
+  letter-spacing: 0;
+  opacity: 0.92;
+  text-align: left;
+}
+
+.bibtex-at {
+  display: inline-block;
+  margin-right: 0.12em;
 }
 
 .project-figure {
@@ -395,8 +431,8 @@ a.cambria-link:active {
   background: rgba(255, 252, 244, 0.92);
   color: var(--project-ink);
   border-radius: 999px;
-  padding: 0.38rem 0.8rem;
-  font-size: 0.88rem;
+  padding: 0.34rem 0.74rem;
+  font-size: 0.85rem;
   font-weight: 600;
   transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
 }
@@ -412,11 +448,34 @@ a.cambria-link:active {
   color: #fffaf2;
 }
 
+.comparison-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.08rem rgba(17, 17, 17, 0.08);
+}
+
+.project-section-body {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.project-ack-section {
+  max-width: 820px;
+}
+
+.project-ack-section .paper-blurb {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.72;
+  text-wrap: pretty;
+  hyphens: auto;
+}
+
 .comparison-stage {
   position: relative;
   height: 300px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: var(--project-soft-rect-radius);
   background: #0d1216;
 }
 
@@ -504,7 +563,7 @@ a.cambria-link:active {
   top: 0.85rem;
   z-index: 2;
   padding: 0.22rem 0.55rem;
-  border-radius: 999px;
+  border-radius: var(--project-soft-rect-radius);
   background: rgba(17, 17, 17, 0.58);
   color: #fff8eb;
   font-size: 0.78rem;
@@ -541,8 +600,8 @@ a.cambria-link:active {
   }
 
   .comparison-toggle {
-    padding: 0.32rem 0.68rem;
-    font-size: 0.82rem;
+    padding: 0.28rem 0.6rem;
+    font-size: 0.79rem;
   }
 
 }
@@ -622,26 +681,129 @@ a.cambria-link:active {
 }
 
 /* "Welcome to Cambria." highlight block */
+.welcome-card-wrap {
+  position: relative;
+}
+
+.welcome-card-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -14px -18px;
+  border-radius: calc(var(--project-soft-rect-radius) + 16px);
+  background:
+    radial-gradient(70% 62% at 50% 48%, rgba(255, 220, 136, 0.11) 0%, rgba(255, 220, 136, 0.04) 42%, rgba(255, 220, 136, 0) 76%),
+    radial-gradient(42% 34% at 52% 44%, rgba(255, 241, 206, 0.08) 0%, rgba(255, 241, 206, 0) 72%),
+    linear-gradient(102deg, rgba(255, 255, 255, 0) 30%, rgba(255, 246, 225, 0.08) 47%, rgba(255, 255, 255, 0) 63%);
+  filter: blur(18px);
+  opacity: 0.56;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .welcome-card {
+  position: relative;
+  z-index: 1;
   margin-top: 1.25rem;
   padding: 0.9rem 1rem;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: var(--project-soft-rect-radius);
+  border: 1px solid rgba(255, 255, 255, 0.48);
   background:
-    radial-gradient(120% 140% at 8% 10%, rgba(255, 214, 120, 0.38) 0%, rgba(255, 214, 120, 0.0) 55%),
-    radial-gradient(140% 120% at 95% 25%, rgba(255, 235, 170, 0.22) 0%, rgba(255, 235, 170, 0.0) 60%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.55) 100%);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+    radial-gradient(72% 84% at 50% 42%, rgba(255, 244, 224, 0.13) 0%, rgba(255, 244, 224, 0) 68%),
+    radial-gradient(125% 150% at 10% 8%, rgba(255, 219, 148, 0.26) 0%, rgba(255, 219, 148, 0.0) 52%),
+    radial-gradient(135% 120% at 92% 20%, rgba(255, 245, 216, 0.22) 0%, rgba(255, 245, 216, 0.0) 58%),
+    radial-gradient(120% 150% at 48% 118%, rgba(208, 167, 120, 0.10) 0%, rgba(208, 167, 120, 0.0) 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.76) 0%, rgba(250, 246, 239, 0.62) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    inset 0 10px 22px rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 rgba(173, 141, 110, 0.08),
+    0 12px 28px rgba(17, 17, 17, 0.08),
+    0 0 18px rgba(255, 215, 128, 0.07),
+    0 0 36px rgba(255, 221, 156, 0.03);
+  backdrop-filter: blur(10px) saturate(1.06);
+  -webkit-backdrop-filter: blur(10px) saturate(1.06);
+  overflow: hidden;
+}
+
+.welcome-card::before,
+.welcome-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.welcome-card::before {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0.10) 42%, rgba(255, 255, 255, 0) 68%),
+    radial-gradient(80% 120% at 18% 0%, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.0) 58%),
+    radial-gradient(42% 52% at 14% 22%, rgba(255, 229, 181, 0.18) 0%, rgba(255, 229, 181, 0.0) 72%),
+    linear-gradient(104deg, rgba(255, 255, 255, 0) 34%, rgba(255, 247, 229, 0.11) 46%, rgba(255, 255, 255, 0) 58%);
+  opacity: 0.88;
+}
+
+.welcome-card::after {
+  inset: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 236, 0.10) 0%, rgba(255, 248, 236, 0) 100%),
+    radial-gradient(78% 90% at 84% 18%, rgba(255, 244, 221, 0.12) 0%, rgba(255, 244, 221, 0.0) 72%);
+  box-shadow:
+    inset 0 0 18px rgba(255, 238, 207, 0.10),
+    inset 0 -10px 18px rgba(118, 87, 56, 0.035);
+  opacity: 0.96;
 }
 
 .welcome-line {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
   font-family: "Alegreya SC", "Alegreya", serif;
   font-size: 1.2rem;
   color: var(--project-ink);
   letter-spacing: 0.02em;
+  transform: translateZ(0);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.30),
+    0 0 8px rgba(255, 244, 225, 0.14),
+    0 2px 8px rgba(81, 54, 24, 0.07);
+}
+
+.welcome-line::before,
+.welcome-line::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.welcome-line::before {
+  color: rgba(255, 225, 168, 0.56);
+  opacity: 0.78;
+  transform: translate(0.016em, -0.01em) scale(1.002);
+  filter: blur(6px);
+  mix-blend-mode: screen;
+  text-shadow:
+    0 0 10px rgba(255, 228, 178, 0.24),
+    0 0 22px rgba(255, 211, 129, 0.18);
+}
+
+.welcome-line::after {
+  color: rgba(191, 221, 255, 0.24);
+  opacity: 0.62;
+  transform: translate(-0.018em, 0.016em);
+  filter: blur(4px);
+  mix-blend-mode: screen;
+  text-shadow:
+    0 0 8px rgba(208, 230, 255, 0.16),
+    0 0 16px rgba(188, 214, 255, 0.12);
 }
 
 .welcome-actions {
+  position: relative;
+  z-index: 1;
   margin-top: 0.35rem;
 }
 

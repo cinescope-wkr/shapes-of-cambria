@@ -12,12 +12,13 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/img/teaser.svg">
 
-    <!-- Versioned favicon assets: SVG for modern browsers, PNG/ICO fallbacks for mobile and legacy UI -->
-    <link rel="icon" href="favicon-v20260314-ribs-white.svg" type="image/svg+xml">
+    <!-- Version-locked favicon stack -->
+    <link rel="icon" href="favicon-v20260314-ribs-white.svg" type="image/svg+xml" sizes="any">
     <link rel="icon" href="favicon-v20260314-ribs-white.png" type="image/png" sizes="512x512">
     <link rel="shortcut icon" href="favicon-v20260314-ribs-white.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon-v20260314-ribs-white.png" sizes="180x180">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="site.webmanifest?v=20260315-28">
+    <meta name="theme-color" content="#8e3a24">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +27,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/style.css?v=20260308-3">
-    <link rel="stylesheet" href="css/project.css?v=20260310-2">
+    <link rel="stylesheet" href="css/style.css?v=20260315-27">
+    <link rel="stylesheet" href="css/project.css?v=20260315-27">
   </head>
 
   <body>
@@ -166,10 +167,12 @@
 	                      When a digital organism evolves to see, should it inherit the cold certainty of math, or can it be steered to embrace the beautiful failures of physical reality?
 	                    </p>
 
-	                    <div class="welcome-card">
-	                      <div class="welcome-line">Welcome to Cambria.</div>
-	                      <div class="welcome-actions">
-	                        <a class="welcome-link" href="https://github.com/cinescope-wkr/cambria" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+	                    <div class="welcome-card-wrap">
+	                      <div class="welcome-card">
+	                        <div class="welcome-line" data-text="Welcome to Cambria.">Welcome to Cambria.</div>
+	                        <div class="welcome-actions">
+	                          <a class="welcome-link" href="https://github.com/cinescope-wkr/cambria" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+	                        </div>
 	                      </div>
 	                    </div>
 	                  </div>
@@ -271,24 +274,33 @@
 
               <div class="row content-header" id="acknowledgement">
                 <div class="col pr-0">
-                  <p>Acknowledgement</p>
+                  <p>Acknowledgment</p>
                 </div>
               </div>
               <div class="row mb-4 mt-4">
-                <div class="col project-text-left">
+                <div class="col project-text-left project-section-body project-ack-section">
                   <p class="paper-blurb">
-                    We gratefully acknowledge <a class="statement-link" href="https://www.media.mit.edu/publications/what-if-eye-computationally-recreating-vision-evolution/" target="_blank" rel="noopener noreferrer">What if eye...? Computationally recreating vision evolution</a> by Kushagra Tiwary et al. (<em>Science Advances</em>, 2025), whose computational study of the coevolution of eyes and behavior in embodied agents helped shape the conceptual foundation of this project. <span class="project-name">Shapes of Cambria</span> algorithmically extends that trajectory through critical artistic perspectives, reconfiguring vision evolution as a more feedback-responsive simulation shaped by human intervention.
+                    We gratefully acknowledge <a class="statement-link" href="https://www.media.mit.edu/publications/what-if-eye-computationally-recreating-vision-evolution/" target="_blank" rel="noopener noreferrer">What if eye...? Computationally recreating vision evolution</a> by Tiwary et al. (<em>Science Advances</em>, 2025), whose computational study of the coevolution of eyes and behavior in embodied agents helped shape the conceptual foundation of this project. <span class="project-name">Shapes of Cambria</span> algorithmically extends that trajectory through critical artistic perspectives, reconfiguring vision evolution as a more feedback-responsive simulation shaped by human intervention.
                   </p>
                   <p class="paper-blurb mb-0">
                     <span class="caption-strong">Future iterations will continue to evolve.</span> The project is <span class="caption-strong">intended to unfold as an interactive and video-based installation</span>, with ongoing development toward a real-time interactive environment in Unity, expanding toward more explicit evolutionary lineages, <span class="caption-accent">real-time interaction</span>, and <span class="caption-accent">multi-participant environments</span>. In doing so, it aims to reopen the relationship between the artist and evolutionary mechanisms as both an analogy for and a material metaphor of differentiable visual computing and AI, while remaining open to the translational mutations and perceptual artifacts that emerge as the system adapts to new computational settings.
                   </p>
-                  <div class="project-citation project-citation-inline">
-                    <p class="project-citation-title">BibTeX</p>
+                </div>
+              </div>
+
+              <div class="row content-header" id="bibtex">
+                <div class="col pr-0">
+                  <p>BibTeX</p>
+                </div>
+              </div>
+              <div class="row mb-4 mt-4">
+                <div class="col project-text-left project-section-body">
+                  <div class="project-citation">
                     <div class="project-citation-block">
                       <div class="project-citation-actions">
                         <button class="project-copy-button" type="button" data-copy-target="cambria-bibtex">Copy</button>
                       </div>
-                      <pre class="project-citation-pre"><code id="cambria-bibtex">@misc{lee2026shapescambria,
+                      <pre class="project-citation-pre"><code id="cambria-bibtex"><span class="bibtex-at">@</span>misc{lee2026shapescambria,
   title        = {Shapes of Cambria: The Cambrian Explosion in Silico},
   author       = {Lee, Jinwoo},
   year         = {2026},
@@ -301,11 +313,9 @@
               </div>
 
               <div class="row mt-5">
-                <div class="col-sm footer-text" style="text-align:left;">
-                  © 2026 Jinwoo Lee. All rights reserved.
-                </div>
-                <div class="col-sm footer-text">
-                  Last updated: 2026-03-07
+                <div class="col footer-text footer-meta">
+                  <span>© 2026 Jinwoo Lee. All rights reserved.</span>
+                  <span>Last updated: 2026-03-07</span>
                 </div>
               </div>
             </div>
@@ -353,11 +363,13 @@
 
             var text = target.textContent;
             var resetLabel = function () {
+              button.classList.remove("is-copied");
               button.textContent = "Copy";
             };
 
             if (navigator.clipboard && navigator.clipboard.writeText) {
               navigator.clipboard.writeText(text).then(function () {
+                button.classList.add("is-copied");
                 button.textContent = "Copied";
                 window.setTimeout(resetLabel, 1200);
               });
@@ -372,6 +384,7 @@
 
             try {
               document.execCommand("copy");
+              button.classList.add("is-copied");
               button.textContent = "Copied";
               window.setTimeout(resetLabel, 1200);
             } finally {

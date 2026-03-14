@@ -1,6 +1,8 @@
 {
   "name": "Shapes of Cambria",
   "short_name": "Cambria",
+  "start_url": "./",
+  "scope": "./",
   "icons": [
     {
       "src": "icon-v20260314-ribs-white-192.png",

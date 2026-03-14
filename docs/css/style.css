@@ -229,6 +229,11 @@ a:active {
   text-decoration: none;
 }
 
+.big-badge-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.08rem rgba(224, 56, 56, 0.10);
+}
+
 .full-title {
   font-family: 'Alegreya', serif;
   font-size: 2.4em;
